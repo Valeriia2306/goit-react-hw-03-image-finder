@@ -1,6 +1,4 @@
 import { ImSearch } from 'react-icons/im';
-
-import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
 import {
@@ -12,16 +10,9 @@ import {
   Input,
 } from './SearchForm.styled';
 
-const SearchSchema = Yup.object().shape({
-  query: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-});
 const SearchForm = ({ onSubmit }) => {
   return (
     <Formik
-      validationSchema={SearchSchema}
       initialValues={{ query: '' }}
       onSubmit={({ query }, actions) => {
         onSubmit(query);

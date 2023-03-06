@@ -63,7 +63,7 @@ class App extends Component {
     const { status } = this.state;
     return (
       <Container>
-        <Searchbar onSubmit={this.handelSabmitForm} />
+        <Searchbar onSubmit={this.handleSabmitForm} />
         <ImageGallery items={this.state.items} />
 
         {(status === 'pending' && (

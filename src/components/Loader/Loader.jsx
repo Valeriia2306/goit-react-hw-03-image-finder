@@ -1,15 +1,23 @@
-import { RotatingLines } from 'react-loader-spinner';
+import { Oval } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
-    <RotatingLines
-      strokeColor="grey"
-      strokeWidth="5"
-      animationDuration="0.75"
-      width="96"
+    <Oval
+      height="80"
+      width="80"
+      color="#3f51b5"
+      ariaLabel="tail-spin-loading"
+      radius="1"
+      wrapperStyle={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: '(-50%, -50%)',
+      }}
+      wrapperClass=""
       visible={true}
     />
   );
 };
 
-export default Loader
+export default Loader;
