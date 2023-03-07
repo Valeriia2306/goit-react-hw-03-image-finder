@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
@@ -21,6 +21,7 @@ class Modal extends Component {
 
   render() {
     const { onClose, image, alt } = this.props;
+
     const portal = document.getElementById('modal');
 
     return ReactDOM.createPortal(

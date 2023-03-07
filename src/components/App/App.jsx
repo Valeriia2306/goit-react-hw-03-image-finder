@@ -36,17 +36,9 @@ class App extends Component {
 
         this.setState(({ items }) => ({
           items: [...items, ...images.hits],
-        }));
 
-        setTimeout(() => {
-          console.log(this.state.items.length);
-          this.setState({
-            status:
-              images.totalHits > this.state.items.length
-                ? 'loadMore'
-                : 'noMore',
-          });
-        }, 10);
+          status: items.length + images.hits.length ? 'loadMore' : 'noMore',
+        }));
       } catch (error) {
         this.setState({ status: error.message });
         return notifyWarning(error.message);

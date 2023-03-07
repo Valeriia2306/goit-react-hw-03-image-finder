@@ -11,7 +11,7 @@ const Loader = () => {
       wrapperStyle={{
         position: 'absolute',
         top: '50%',
-        left: '50%',
+        left: '45%',
         transform: '(-50%, -50%)',
       }}
       wrapperClass=""
