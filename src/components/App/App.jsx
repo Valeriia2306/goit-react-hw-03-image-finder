@@ -37,7 +37,10 @@ class App extends Component {
         this.setState(({ items }) => ({
           items: [...items, ...images.hits],
 
-          status: items.length + images.hits.length ? 'loadMore' : 'noMore',
+          status:
+            items.length + images.hits.length > images.totalHits
+              ? 'loadMore'
+              : 'noMore',
         }));
       } catch (error) {
         this.setState({ status: error.message });
